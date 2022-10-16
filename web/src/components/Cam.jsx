@@ -57,14 +57,17 @@ export default function Cam() {
             <div className="App">
                 <main className="App-main">
                     <h1>Extracted text</h1>
-                    <img
-                        width="600"
-                        height="400"
-                        alt="stream"
-                        src="http://192.168.4.1/mjpeg/1"
-                        ref={image_ref}
-                    />
-                    <button onClick={text_rec} style={{height:50}}> convert to text</button>
+                    <div className={"flex"}>
+                        <img
+                            style={{rotate: "90deg", width: "100%", height: "100%"}}
+                            width={300}
+                            height={400}
+                            alt="stream"
+                            src="http://192.168.4.1/mjpeg/1"
+                            ref={image_ref}
+                        />
+                        <button onClick={text_rec} style={{height:50, translate: "0 100px"}}>Convert to Text</button>
+                    </div>
                 </main>
             </div>
         </Container>
